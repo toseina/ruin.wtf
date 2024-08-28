@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+//const port = process.env.PORT || 3000;
 
 const whitelist = ['1009241974143987723', '691678041927319553'];
 
@@ -15,6 +15,6 @@ app.get('/api/check', (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`server running on https://ruin.wtf:${port}`)
-})
+//app.listen(port, () => {
+//    console.log(`server running on https://ruin.wtf:${port}`)
+//})
