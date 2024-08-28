@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="@malefic | top">
+        <meta property="og:image" content="https://i.imgur.com/xjcKC1s.jpeg">
+        <meta property="og:url" content="ruin.wtf">
+        <title> flxr </title>
+        <style> body { padding: 100; background-color: black; } </style>
+    </head>
+    <body>
+        <center>
+            <video width="70%" src="/assets/zzz.mp4" controls></video>
+        </center>
+        <script language="JavaScript">
+            window.onload = function() {
+                document.addEventListener(
+                    "contextmenu",
+                    function(e) {
+                        e.preventDefault();
+                    },
+                    false
+                );
+                document.addEventListener(
+                    "keydown",
+                    function(e) {
+                        //document.onkeydown = function(e) {
+                        // "I" key
+                        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                            disabledEvent(e);
+                        }
+                        // "J" key
+                        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                            disabledEvent(e);
+                        }
+                        // "S" key + macOS
+                        if (
+                            e.keyCode == 83 &&
+                            (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+                        ) {
+                            disabledEvent(e);
+                        }
+                        // "U" key
+                        if (e.ctrlKey && e.keyCode == 85) {
+                            disabledEvent(e);
+                        }
+                        // "F12" key
+                        if (event.keyCode == 123) {
+                            disabledEvent(e);
+                        }
+                    },
+                    false
+                );
+
+                function disabledEvent(e) {
+                    if (e.stopPropagation) {
+                        e.stopPropagation();
+                    } else if (window.event) {
+                        window.event.cancelBubble = true;
+                    }
+                    e.preventDefault();
+                    return false;
+                }
+            };
+        </script>
+    </body>
+</html>
